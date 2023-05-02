@@ -33,7 +33,7 @@ int declareWinner(int winner, int decision, int bet); //checks if user win or lo
 
 int main(){
 
-    system ("Color 2F"); //CLI color changer
+    system ("Color 0F"); //CLI color changer
     srand(time(NULL)); //random number initialization
 
     //variable declaration
@@ -41,7 +41,7 @@ int main(){
     int bet, decision, winner, prize;
     char play;
     bool logic = true;
-    int money = 10000;
+    int money = 20000;
 
     std::cout << "==============================" << std::endl;
     std::cout << "To Start, please enter your card" << std::endl;
@@ -73,6 +73,7 @@ int main(){
         std::cout << "Place your bet, PHP: ";
         std::cin >> bet;
        }while(bet > money);
+       play1 = i++;
 
 
 
@@ -143,6 +144,7 @@ int main(){
     std::cout << "Current Money, PHP " << money << "\n\n";
 
     //Asks the user if he wants to play again
+    std::cout << "number of plays: " << play1 << "\n";
     std::cout << "PLAY AGAIN? Y/N ";
     std::cin >> play;
     logic = playAgain(play,money);
